@@ -1,15 +1,19 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="search-container">
+    <search-bar placeholder="Search..."/>
+    <search-results/>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import SearchBar from './components/search-bar.vue'
+import SearchResults from './components/search-results.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    SearchBar,
+    SearchResults
   }
 }
 </script>
@@ -21,6 +25,9 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+
+#search-container {
+  padding: 20px;
 }
 </style>
